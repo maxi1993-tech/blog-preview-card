@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/maxi1993-tech/blog-preview-card)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/blog-preview-card-css-flexbox-Nkl8guiO-H)
 - Live Site URL: [https://maxi1993-tech.github.io/blog-preview-card](https://maxi1993-tech.github.io/blog-preview-card)
 
 ## My process
