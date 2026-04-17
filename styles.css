@@ -21,7 +21,6 @@ body {
     background-color: var(--color-bg);
     font-family: "figtree", sans-serif;
     min-height: 100vh;
-    max-width: 1440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,13 +36,10 @@ body {
     gap: 5px;
 }
 
-.container-1 {
-    width: 336px;
-}
-
 article {
     background-color: var(--color-card);
     max-width: 384px;
+    width: 100%;
     border-radius: 20px;
     margin: auto;
     box-shadow: 10px 10px 2px var(--color-shadow);
@@ -125,8 +121,32 @@ p.date {
 
 h1:hover {
     color: var(--color-yellow);
+    cursor: pointer;
 }
 
 h1:focus {
     color: var(--color-yellow);
+}
+
+@media (max-width: 375px) {
+    article {
+        max-width: 327px;
+    }
+
+    span {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .profil>p {
+        font-size: 14px;
+    }
+
 }
