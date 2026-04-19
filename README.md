@@ -15,6 +15,7 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
   - [Useful resources](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -42,18 +43,19 @@ Users should be able to:
 - Flexbox
 - Desktop-first workflow
 - Local fonts (`@font-face`)
+- `clamp()` for responsive typography
 
 ### What I learned
 
-This project taught me how to use @font-face for local fonts, how CSS specificity works in practice, and how to make a card responsive with width + max-width. I also took my first real steps with Figma.
+This project taught me how to use `@font-face` for local fonts, how CSS specificity works in practice, and how to make a card responsive with `width` + `max-width`. I also took my first real steps with Figma — reading exact values like font sizes, spacing, and drop shadows directly from the design file. Finally, I applied `clamp()` to handle responsive font sizes without extra media queries, and learned the importance of consistent and meaningful CSS class naming.
 
 ### Continued development
 
-For my next projects I want to focus on Figma, semantic HTML, relative units, responsive design and CSS specificity. I also want to learn how to better organize my CSS to avoid redundant classes.
+For my next projects I want to focus on Figma, semantic HTML, relative units (`rem`, `em`), responsive design and CSS specificity. I also want to get more comfortable with `clamp()` and `calc()`, and learn how to better organize my CSS to avoid redundant classes.
 
 ### Useful resources
 
-- [MDN Web Docs](https://developer.mozilla.org) - I used it to look up @font-face syntax and CSS properties I wasn't sure about.
+- [MDN Web Docs](https://developer.mozilla.org) - I used it to look up `@font-face` syntax, `clamp()`, and CSS properties I wasn't sure about.
 
 ### AI Collaboration
 
@@ -63,3 +65,7 @@ I used Claude throughout the project. It guided me on HTML structure, CSS and re
 
 - Frontend Mentor - [@maxi1993-tech](https://www.frontendmentor.io/profile/maxi1993-tech)
 - GitHub - [maxi1993-tech](https://github.com/maxi1993-tech)
+
+## Acknowledgments
+
+Thanks to [@liander-1](https://www.frontendmentor.io/profile/liander-1) for the tip about using `clamp()` to reduce media query usage — I applied it in this refactor!
