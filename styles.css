@@ -1,12 +1,16 @@
-* {
-    box-sizing: border-box;
-}
-
 @font-face {
     font-family: 'Figtree';
     src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
 
 :root {
     --color-bg: hsl(47, 88%, 63%);
@@ -15,97 +19,109 @@
     --color-shadow: hsl(0, 0%, 7%);
     --color-yellow: hsl(47, 88%, 63%);
     --color-title: hsl(0, 0%, 7%);
+    --color-footer: hsl(228, 45%, 44%);
+    --font-family: "figtree", sans-serif;
+    --card-shadow: 10px 10px 2px var(--color-shadow);
+    --card-border: 1px solid black;
+
 }
 
 body {
-    background-color: var(--color-bg);
-    font-family: "figtree", sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.container {
-    width: 100%;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
+    background-color: var(--color-bg);
+    font-family: var(--font-family);
 }
 
 article {
-    background-color: var(--color-card);
     max-width: 384px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    background-color: var(--color-card);
     border-radius: 20px;
-    margin: auto;
-    box-shadow: 10px 10px 2px var(--color-shadow);
-    border: 1px solid black;
+    box-shadow: var(--card-shadow);
+    border: var(--card-border);
+    padding: 24px 24px;
 }
 
-.images {
-    width: 100%;
+.card-img {
+    width: calc(100% + 1.6px);
     border-radius: 10px;
+    margin-bottom: -1.6px;
 }
 
-.box {
-    background-color: var(--color-yellow);
-    padding: 10px;
-    margin-top: 18px;
-    width: 82px;
-    height: 29px;
+.card-tag {
+    width: 24.525%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-yellow);
     border-radius: 4px;
 }
 
 span {
     font-weight: 900;
-    font-size: 16px;
+    font-size: clamp(12px, 1em, 14px);
     color: var(--color-title);
-}
-
-h1 {
-    font-size: 23px;
-    font-weight: 950;
     margin: 0;
-    color: var(--color-title);
+    padding: 4px 12px;
+    line-height: 150%;
 }
 
-p {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--color-text);
-}
-
-p.date {
-    color: var(--color-title);
-}
-
-.profil {
+.card-content {
+    width: calc(100% + 1.6px);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    width: 145px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     gap: 12px;
 }
 
-.logo {
-    width: 32px;
-    height: 32px;
-    margin: 0;
-
+h1 {
+    font-size: clamp(20px, 2em, 24px);
+    font-weight: 900;
+    color: var(--color-title);
+    line-height: 150%;
 }
 
-.profil>p {
+p {
+    font-size: clamp(12px, 1em, 16px);
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 150%;
+}
+
+p.card-date {
     color: var(--color-title);
-    font-weight: 950;
+    font-size: clamp(12px, 1em, 14px);
+    line-height: 150%;
+}
+
+.card-profil {
+    width: calc(100% + 1.6px);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.card-profil>p {
+    color: var(--color-title);
+    font-weight: 900;
+    font-size: clamp(12px, 1em, 14px);
+    line-height: 150%;
+    text-shadow:  0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .attribution {
@@ -116,7 +132,7 @@ p.date {
 
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--color-footer);
 }
 
 h1:hover {
@@ -132,21 +148,4 @@ h1:focus {
     article {
         max-width: 327px;
     }
-
-    span {
-        font-size: 12px;
-    }
-
-    p {
-        font-size: 12px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    .profil>p {
-        font-size: 14px;
-    }
-
 }
